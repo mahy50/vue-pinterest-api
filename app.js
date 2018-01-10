@@ -28,7 +28,7 @@ app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: false }));
 app.use(cookieParser());
 app.use(session({
-  secret: 'keyboard cat',
+  secret: 'pinterest-api',
   saveUninitialized: true,
   resave: false
 }));

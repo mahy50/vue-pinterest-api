@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "NODE_ENV=development DEBUG=vue-mall-service:* nodemon ./bin/www"
+    "dev": "cross-env NODE_ENV=development DEBUG=vue-mall-service:* nodemon ./bin/www",
+    "product": "cross-env NODE_ENV=production pm2 start ./bin/www -i 2"
+
   },
   "dependencies": {
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
+    "cross-env": "^5.1.3",
     "debug": "~2.6.9",
     "express": "~4.15.5",
     "express-session": "^1.15.6",
@@ -19,6 +22,7 @@
     "morgan": "~1.9.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "pm2": "^2.9.1",
     "serve-favicon": "~2.4.5",
     "sharp": "^0.18.4"
   }
