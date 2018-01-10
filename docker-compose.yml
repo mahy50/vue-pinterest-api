@@ -1,0 +1,15 @@
+version: '3'
+services:
+  api:
+    build: .
+    ports:
+    - "5000:5000"
+    volumes:
+    - .:/code
+    - logvolume01:/var/log
+    networks:
+    - backend
+  mongodb:
+    image: mongodb
+    volumes:
+    - data:/data

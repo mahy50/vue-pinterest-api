@@ -141,9 +141,7 @@ exports.createPin = function (req, res, next) {
           }).then(doc => {
             res.status(201).json('successful')
           })
-        }).catch(err => {
-            next(err)
-          })
+        })
     })
   } else {
     res
@@ -169,8 +167,6 @@ exports.getOwnPins = function (req, res, next) {
               .status(200)
               .json(pins)
           })
-      }).catch(err => {
-        next(err)
       })
   }
 }
@@ -188,8 +184,6 @@ exports.delPinById = function (req, res, next) {
       Pin
         .remove({_id: id})
         .then(() => res.status(204))
-    }).catch(err => {
-      next(err)
     })
   }
 }
