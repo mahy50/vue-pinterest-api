@@ -52,4 +52,7 @@ const PinSchema = new Schema({
 //   })
 // })
 
+// 创建文本索引
+PinSchema.index({title: 'text', description: 'text'})
+
 module.exports = PinSchema

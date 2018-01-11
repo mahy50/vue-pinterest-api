@@ -1,3 +1,3 @@
-// proccess.env.NODE_ENV
-let NODE_ENV = 'development'
+// process.env.NODE_ENV
+const NODE_ENV = process.env.NODE_ENV
 module.exports = require(`./env/${NODE_ENV}.js`)
