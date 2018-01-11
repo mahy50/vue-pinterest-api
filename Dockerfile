@@ -16,4 +16,4 @@ EXPOSE 3000
 
 ENV VIRTUAL_HOST=api.pinterest.mahaoyuan.com
 
-CMD ["npm", "product"]
+CMD ["npm", "run", "product"]
