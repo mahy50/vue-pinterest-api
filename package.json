@@ -5,7 +5,7 @@
   "scripts": {
     "start": "DEBUG=vue-mall-service:* node ./bin/www",
     "dev": "cross-env NODE_ENV=development DEBUG=vue-mall-service:* nodemon ./bin/www",
-    "product": "cross-env NODE_ENV=production pm2 start ./bin/www -i 1"
+    "product": "NODE_ENV=production pm2 start ./bin/www -i 1 --no-daemon"
 
   },
   "dependencies": {

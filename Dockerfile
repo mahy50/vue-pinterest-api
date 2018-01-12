@@ -12,8 +12,6 @@ WORKDIR /code
 
 RUN cnpm install
 
-VOLUME [ "/images" ]
-
 EXPOSE 3000
 
 # ENV VIRTUAL_HOST=api.pinterest.mahaoyuan.com
