@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "DEBUG=vue-mall-service:* node ./bin/www",
     "dev": "cross-env NODE_ENV=development DEBUG=vue-mall-service:* nodemon ./bin/www",
-    "product": "cross-env NODE_ENV=production pm2 start ./bin/www -i 2"
+    "product": "cross-env NODE_ENV=production pm2 start ./bin/www -i 1"
 
   },
   "dependencies": {
